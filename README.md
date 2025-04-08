@@ -11,7 +11,7 @@ The LTV/CAC Ratio is above >1, which shows that the company is profitable in its
 
 The company should maintain its operations at the current company and monitor this ratio regularly to maintain long-term profitability for the business.
 
-## **How i solving this project**
+## **How was I solving this project?**
 ** Read the Data (Monthly Expenses, Payroll, Customer Lifespan Data, Daily marketing spending, Receipts history)**
 
     monthly_expences_GS = '10OGbaywwMIqKgnPGy8VDvpBVtjyqln47iYa2lFhI9Mw'
