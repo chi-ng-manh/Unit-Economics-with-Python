@@ -114,3 +114,92 @@ ARPU = Total Revenue / Number of User
 
     ARPU = Total_Revenue / TotalCustomer_last_month
     print(ARPU)
+
+## 3. Cost of Goods Sold (COGS)
+
+COGS = Beginning Inventory + Purchase During Period - Ending Inventory
+
+**3.1 Last Month Purchase During Period**
+
+    last_month_expences
+    
+    production_rows = ['AWS Hosting', 'Google Cloud Storage', 'Atlassian Jira', 'Slack', 'Zoom']
+    production_purchase = last_month_expences[last_month_expences['item'].isin(production_rows)]
+    production_purchase
+    
+    solfware_n_server_expences = production_purchase['amount'].sum()
+    print(solfware_n_server_expences)
+    
+**3.2 Last Month payroll (Engineering)**
+
+    last_payroll
+    
+    production_salaries_df = last_payroll[last_payroll['department'] == "Engineering"]
+    production_salaries_df
+    
+    production_salaries = production_salaries_df['paid'].sum()
+    print(production_salaries)
+    
+**3.3 COGS Calculation**
+
+    COGS = solfware_n_server_expences + production_salaries
+    print(COGS)
+
+## 4. GROSS Margin
+
+GrossMargin = ((Revenue - COGS) / Revenue) * 100
+
+**4.1 Last Month Revenue**
+
+    Last_month_Revenue
+    
+    Revenue = Last_month_Revenue['receipt_amount'].sum()
+    print(Revenue)
+    
+4.2 Gross Margin Calculation
+
+    GrossMargin = (Revenue - COGS) / Revenue * 100
+    print(GrossMargin)
+    
+## 5. Customer Life Time Value (LTV)
+
+LTV = ARPU x CustomerLifeTimeSpan x GrossMargin
+
+**5.1 Average Customer Lifespan**
+ 
+    customer_lifespan_data.sample(10)
+    
+ #Handle cases when churn_date is None (Customer did not churn whithin the observed period)
+    
+    lifespan_data = customer_lifespan_data.dropna(subset=['churn_date'])
+    
+Calculate customer lifespan in days (in the new column "lifespan_days")
+
+    lifespan_data['lifespan_days'] = (lifespan_data['churn_date'] - lifespan_data['start_date']).dt.days
+
+Calculate the average lifespan in days
+
+    avg_lifespan_days = lifespan_data['lifespan_days'].mean()
+
+Convert average lifespan to months
+
+    avg_lifespan_months = avg_lifespan_days / 30
+    print(avg_lifespan_months)
+
+**5.2 LTV Calculation**
+
+    LTV = ARPU * avg_lifespan_months * GrossMargin/100
+    print(LTV)
+    
+## 6. LTV / CAC Ratio
+
+    LTV_CAC_Ratio = LTV / CAC
+    print(LTV_CAC_Ratio)
+    
+## 7. Conclusion
+
+Comparing the LTV (2096 USD) and CAC (1214 USD) ratio, it shows that the cost of new customers is good and worth investing.
+
+The LTV/CAC Ratio is above >1, which shows that the company is profitable in its business operations.
+
+The company should maintain its operations at the current company and monitor this ratio regularly to maintain long-term profitability for the business.
