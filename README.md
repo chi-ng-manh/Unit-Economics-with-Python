@@ -4,7 +4,8 @@
 
 **Objective:** Calculate the unit economics for Streamline Pro for the month of March 2023. This will help us assess the profitability and efficiency of our customer acquisition strategies and operational expenses.
 
-**Conclusion**
+**Conclusion:**
+
 Comparing the LTV (2096 USD) and CAC (1214 USD) ratio, it shows that the cost of new customers is good and worth investing.
 
 The LTV/CAC Ratio is above >1, which shows that the company is profitable in its business operations.
