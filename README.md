@@ -6,11 +6,11 @@
 
 **Conclusion:**
 
-Comparing the LTV (2096 USD) and CAC (1214 USD) ratio, it shows that the cost of new customers is good and worth investing.
+* Comparing the LTV (2096 USD) and CAC (1214 USD) ratio, it shows that the cost of new customers is good and worth investing.
 
-The LTV/CAC Ratio is above >1, which shows that the company is profitable in its business operations.
+* The LTV/CAC Ratio is above >1, which shows that the company is profitable in its business operations.
 
-The company should maintain its operations at the current company and monitor this ratio regularly to maintain long-term profitability for the business.
+* The company should maintain its operations at the current company and monitor this ratio regularly to maintain long-term profitability for the business.
 
 ## **How was I solving this project?**
 ** Read the Data (Monthly Expenses, Payroll, Customer Lifespan Data, Daily marketing spending, Receipts history)**
